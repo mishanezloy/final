@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина заказов - SushiMaster</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-fish"></i>
+                    <h1>Sushi<span>Master</span></h1>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                        <li><a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i> Корзина <span id="cart-count">0</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <div class="container">
+            <div class="cart-header">
+                <h2><i class="fas fa-shopping-cart"></i> Ваша корзина</h2>
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Вернуться в меню</a>
+            </div>
+
+            <!-- Информация о времени приготовления -->
+            <div class="preparation-time">
+                <div class="time-card">
+                    <h3><i class="fas fa-clock" style="color: #ff3b30;"></i> Расчет времени приготовления</h3>
+                    <div class="time-details">
+                        <div class="time-item">
+                            <span>Базовое время:</span>
+                            <span class="time-value">15 минут</span>
+                        </div>
+                        <div class="time-item">
+                            <span>Доп. время (за каждые 3 позиции):</span>
+                            <span class="time-value" id="additional-time">0 минут</span>
+                        </div>
+                        <div class="time-divider"></div>
+                        <div class="time-item total-time">
+                            <span>Общее время приготовления:</span>
+                            <span class="time-value" id="total-time">15 минут</span>
+                        </div>
+                    </div>
+                    <p class="time-note">* К базовому времени добавляется 5 минут за каждые 3 позиции в заказе</p>
+                </div>
+            </div>
+
+            <!-- Содержимое корзины -->
+            <div class="cart-container">
+                <div class="cart-items">
+                    <div class="cart-items-content" id="cart-items-content">
+                        <!-- Товары будут добавлены через JavaScript -->
+                        <div class="empty-cart" id="empty-cart">
+                            <i class="fas fa-shopping-basket"></i>
+                            <h3>Ваша корзина пуста</h3>
+                            <p>Добавьте товары из меню, чтобы оформить заказ</p>
+                            <a href="index.html" class="btn">Перейти в меню</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Итоговая информация о заказе -->
+                <div class="order-summary">
+                    <h3><i class="fas fa-receipt" style="color: #ff3b30;"></i> Итог заказа</h3>
+                    <div class="summary-details">
+                        <div class="summary-item">
+                            <span>Товаров:</span>
+                            <span id="total-items">0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Сумма заказа:</span>
+                            <span id="order-sum">0 ₽</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Доставка:</span>
+                            <span id="delivery-cost">200 ₽</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-item total">
+                            <span>Итого к оплате:</span>
+                            <span>
+                                <div class="total-amount" id="total-amount">0 ₽</div>
+                                <div class="cooking-time" id="cooking-time">Время приготовления: 15 мин</div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="delivery-note" id="delivery-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Добавьте товаров на 1000 ₽ для бесплатной доставки</p>
+                    </div>
+                    <button class="btn checkout-btn" id="checkout-btn" disabled>Оформить заказ</button>
+                    <button class="btn clear-btn" id="clear-cart">Очистить корзину</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3><i class="fas fa-fish"></i> SushiMaster</h3>
+                    <p>Лучшие суши в городе с доставкой на дом</p>
+                    <p>Режим работы: 10:00 - 23:00 ежедневно</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ул. Сушичная, 15</p>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2023 SushiMaster. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

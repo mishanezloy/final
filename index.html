@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SushiMaster - Заказ суши с доставкой</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-fish"></i>
+                    <h1>Sushi<span>Master</span></h1>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Главная</a></li>
+                        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span id="cart-count">0</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <div class="container">
+            <!-- Баннер с информацией о времени -->
+            <section class="info-banner">
+                <div class="time-info">
+                    <i class="fas fa-clock" style="color: #ff3b30;"></i>
+                    <div>
+                        <h3>Время приготовления</h3>
+                        <p id="prep-time">Базовое время: <span>15 минут</span></p>
+                        <p class="small-text">+5 минут за каждые 3 позиции в заказе</p>
+                    </div>
+                </div>
+                <div class="delivery-info">
+                    <i class="fas fa-motorcycle" style="color: #ff3b30;"></i>
+                    <div>
+                        <h3>Доставка</h3>
+                        <p>Бесплатно при заказе от 1000 ₽</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Меню суши -->
+            <section class="menu-section">
+                <h2><i class="fas fa-utensils"></i> Наше меню</h2>
+                <div class="filters">
+                    <button class="filter-btn active" data-category="all">Все</button>
+                    <button class="filter-btn" data-category="classic">Классические</button>
+                    <button class="filter-btn" data-category="spicy">Острые</button>
+                    <button class="filter-btn" data-category="premium">Премиум</button>
+                </div>
+
+                <div class="menu-grid" id="menu-items">
+                    <!-- Суши будут добавлены через JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3><i class="fas fa-fish"></i> SushiMaster</h3>
+                    <p>Лучшие суши в городе с доставкой на дом</p>
+                    <p>Режим работы: 10:00 - 23:00 ежедневно</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ул. Сушичная, 15</p>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2023 SushiMaster. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для подтверждения добавления в корзину -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h3>Товар добавлен в корзину!</h3>
+                <p>Вы можете продолжить выбор или перейти к оформлению заказа.</p>
+                <div class="modal-buttons">
+                    <button class="btn continue-btn">Продолжить</button>
+                    <a href="cart.html" class="btn cart-link">Перейти в корзину</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
